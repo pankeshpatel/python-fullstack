@@ -1,0 +1,14 @@
+fastapi
+bcrypt==4.0.1
+python-multipart
+passlib
+uvicorn
+pydantic
+sqlalchemy
+python-jose
+psycopg2-binary
+alembic
+pytest
+pytest-asyncio
+aiofiles
+jinja2
