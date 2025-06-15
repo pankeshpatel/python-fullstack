@@ -24,6 +24,7 @@ async def delete_user(username: str, user: user_dependency, db: db_dependency):
 
     db.query(Users).filter(user.get("username") == username).delete()
     db.commit()
+    return {"detail": "user is deleted successfully"}
 
 
 @router.get("/todo", status_code=status.HTTP_200_OK)
