@@ -69,3 +69,126 @@ users.py
 health.py
 (BE) GET         /health                  - check system status
 ```
+
+
+#### notes
+
+### Backend Engineering
+- CRUD operations
+- Query String, Path Parameters
+
+#### Data Validation
+- Input Request Validation using `typing` and `pydantic`
+- Input Request example using `model_config`
+- Path Parameter Validation using `Path`
+- Query Parameter Validation using `Query`
+
+#### Status Code/HTTP Exception
+-  `HTTPException`, `status`
+
+#### Database
+
+- `SQLAlchemy`, `sqlite`
+
+
+#### Auth and Authorization
+
+- `jwt`
+
+
+### Clean architecture
+
+- `database.py` : stores database connection string, database
+- `models.py`   : stores info about tables of databases, PK, FK, Columns of tables 
+- `main.py`  : entry point of an application
+
+### Database 
+
+- `alembic` (data migration tool)
+- `MySQL` , `PostgreSQL` , `sqlite`
+
+
+### Testing, CI/CD
+
+- Unit Testing
+- Integration Testing
+- CI/CD using gitlab, 
+- GitHub Actions
+- MLOps
+- DevSecOps
+
+# Debugging
+- python tools to debug code
+
+
+### Front-end 
+- Full-stack application development
+
+### Optimization, performance improvements
+
+- Asyncronouse programming/Concurrency
+- Caching
+- Database indexing
+
+# Security 
+ - `OAuth2` 
+ - Authentication & Authorization
+
+
+# Scalability, Fault-tolerance, reliability
+ - Load balancing, Nginx
+ - Autoscaling infrastructure.
+ - Rate limit
+ - Rate limiting and throttling.
+ - Exception/Error Handling
+ - health-check
+
+# Interaction patterns
+
+- HTTP/HTTPS
+- GraphQL
+- WebSocket
+- gRPC
+
+
+# Real-time Streaming
+
+
+# Deployment
+
+- Docker/Docker compose
+- Kubernates
+- Deployment to AWS Infrastructure, as lambda, ECS
+- IaC, Terraform, CDK, Serverless
+- CDN 
+
+
+# AI/ML
+
+- Machine learning + Python
+- GenAI
+
+# Monitoring and obeservation
+
+- DataDog
+- X-ray
+
+# Real-time data handling
+- Stream processing
+- video, audio
+-  handling real-time streaming application
+- Stream Analytics
+
+
+### Questions to be explore
+
+-  pydantic?
+- starlett?
+-  poetry?
+
+# other architecture
+- Concurrency and idempotency.
+- Job scheduling and cron systems.
+- Events, message queues, and workers.
+- Clean Architecture
+- architecture pattern
