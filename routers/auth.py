@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, status, Request
 from typing import Annotated
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import jwt, JWTError
@@ -6,15 +6,26 @@ from database.database import db_dependency
 from models.models import Users
 from passlib.context import CryptContext
 from datetime import timedelta, datetime, timezone
-from pydantic import BaseModel
+from fastapi.templating import Jinja2Templates
 
 
 router = APIRouter(tags=["auth"])
 oauth2_bearer = OAuth2PasswordBearer(tokenUrl="/login")
 bcrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+templates = Jinja2Templates(directory="templates")
 
 SECRET_KEY = "197b2c37c391bed93fe80344fe73b806947a65e36206e05a1a23c2fa12702fe3"
 ALGORITHM = "HS256"
+
+
+@router.get("/login-page")
+def render_login_page(request: Request):
+    return templates.TemplateResponse("login.html", {"request": request})
+
+
+@router.get("/register-page")
+def render_register_page(request: Request):
+    return templates.TemplateResponse("register.html", {"request": request})
 
 
 async def get_current_user(token: Annotated[str, Depends(oauth2_bearer)]):

@@ -24,10 +24,13 @@ Root-dir
      |_ `*.py` (all endpoints)
 |- `static` (Frontend dir)
       - `css` (dir)
+        |_  `*.css`
       - `js`   (dir)
-          |_ `*.js` ()
+          |_ `*.js` 
 |-  `templates` (frontend dir)
       |_ `*.html` 
+|-  `scripts` (dir)
+      |_ `*.sh` 
 |-  `alembic` (for data migration)
 |-  `.venv` (python virtual environment)
 |-   `.gitignore`
@@ -44,19 +47,24 @@ admin.py
 
 auth.py
 (BE) GET        /login                   - Get a token of an existing user
+(FE) GET        /register-page            - Render register page
+(FE) GET        /login-page               - Render login page
 
 todos.py
-(BE) GET /todos/                         - Read all Todos of a user
-(BE) GET /todos/{todo_id}                - Read Todo by ID of a user
-(BE) POST /todos/todos                   - Create a new todos of a user
-(BE) PUT  /todos/todo/{todo_id}          - Update an existing todo of a user
-(BE) DELETE /todos/todo/{todo_id}        - Delete an existing todo of a user
+(BE) GET          /todos/                         - Read all Todos of a user
+(BE) GET          /todos/{todo_id}                - Read Todo by ID of a user
+(BE) POST         /todos/todos                   - Create a new todos of a user
+(BE) PUT          /todos/todo/{todo_id}          - Update an existing todo of a user
+(BE) DELETE       /todos/todo/{todo_id}        - Delete an existing todo of a user
+(FE) GET          /todo-page                      - Render Todo page
+(FE) GET          /add-todo-page                  - Render Add Todo page
+(FE) GET          /edit-todo-page/{todo_id}       - Render Edit Todo page
 
 users.py
-(BE) GET   /user/                         -  get user
-(BE) POST /user/register                  - register a user
-(BE) PUT /user/password                   - change password
-(BE) PUT /user/phonenumber/{phone_number} - change phone number
+(BE) GET          /user/                         -  get user
+(BE) POST         /user/register                  - register a user
+(BE) PUT          /user/password                   - change password
+(BE) PUT          /user/phonenumber/{phone_number} - change phone number
 
 health.py
 (BE) GET         /health                  - check system status
