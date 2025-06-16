@@ -117,7 +117,7 @@ health.py
 - MLOps
 - DevSecOps
 
-# Debugging
+### Debugging
 - python tools to debug code
 
 
@@ -130,12 +130,12 @@ health.py
 - Caching
 - Database indexing
 
-# Security 
+### Security 
  - `OAuth2` 
  - Authentication & Authorization
 
 
-# Scalability, Fault-tolerance, reliability
+### Scalability, Fault-tolerance, reliability
  - Load balancing, Nginx
  - Autoscaling infrastructure.
  - Rate limit
@@ -143,7 +143,7 @@ health.py
  - Exception/Error Handling
  - health-check
 
-# Interaction patterns
+### Interaction patterns
 
 - HTTP/HTTPS
 - GraphQL
@@ -151,10 +151,10 @@ health.py
 - gRPC
 
 
-# Real-time Streaming
+### Real-time Streaming
 
 
-# Deployment
+### Deployment
 
 - Docker/Docker compose
 - Kubernates
@@ -163,17 +163,17 @@ health.py
 - CDN 
 
 
-# AI/ML
+### AI/ML
 
 - Machine learning + Python
 - GenAI
 
-# Monitoring and obeservation
+### Monitoring and obeservation
 
 - DataDog
 - X-ray
 
-# Real-time data handling
+### Real-time data handling
 - Stream processing
 - video, audio
 -  handling real-time streaming application
@@ -186,7 +186,7 @@ health.py
 - starlett?
 -  poetry?
 
-# other architecture
+### other architecture
 - Concurrency and idempotency.
 - Job scheduling and cron systems.
 - Events, message queues, and workers.
