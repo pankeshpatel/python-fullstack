@@ -1,8 +1,8 @@
 from fastapi import FastAPI, APIRouter, Depends, status, HTTPException
-from database.database import db_dependency
-from routers.auth import get_current_user
+from backend.database.database import db_dependency
+from backend.routers.auth import get_current_user
 from typing import Annotated
-from models.models import Users, Todos
+from backend.models.models import Users, Todos
 
 
 router = APIRouter(prefix="/admin", tags=["admin"])

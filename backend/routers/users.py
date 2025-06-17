@@ -1,10 +1,10 @@
 from fastapi import APIRouter, status, Depends, HTTPException
-from database.database import db_dependency
-from models.models import Users
+from backend.database.database import db_dependency
+from backend.models.models import Users
 from pydantic import BaseModel, Field
 from passlib.context import CryptContext
 from typing import Annotated
-from routers.auth import get_current_user
+from backend.routers.auth import get_current_user
 
 
 router = APIRouter(prefix="/user", tags=["user"])

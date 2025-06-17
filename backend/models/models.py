@@ -1,4 +1,4 @@
-from database.database import Base
+from backend.database.database import Base
 from sqlalchemy import Column, Integer, Boolean, ForeignKey, String
 
 

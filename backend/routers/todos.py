@@ -1,13 +1,13 @@
 from fastapi import status, APIRouter, Depends, HTTPException, Path, Request
-from database.database import db_dependency
+from backend.database.database import db_dependency
 from typing import Annotated
-from routers.auth import get_current_user
-from models.models import Users, Todos
+from backend.routers.auth import get_current_user
+from backend.models.models import Users, Todos
 from pydantic import BaseModel, Field
 from fastapi.templating import Jinja2Templates
 from starlette.responses import RedirectResponse
 
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="./frontend/templates")
 
 
 router = APIRouter(prefix="/todos", tags=["todos"])

@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from fastapi import Depends
 
 # sqlite connection
-SQLALCHEMY_DATABASE_URL = "sqlite:///./database/todosapp.db"
+SQLALCHEMY_DATABASE_URL = "sqlite:///./backend/database/todosapp.db"
 
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}

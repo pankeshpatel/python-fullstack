@@ -1,13 +1,13 @@
 from fastapi import FastAPI, status, Request
-from routers import auth, todos, admin, users, health
-from database.database import engine, Base
+from backend.routers import auth, todos, admin, users, health
+from backend.database.database import engine, Base
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
 
 
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/static", StaticFiles(directory="./frontend/static"), name="static")
 
 
 @app.get("/")

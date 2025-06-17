@@ -1,15 +1,15 @@
 from fastapi.testclient import TestClient
-from main import app
+from backend.main import app
 from sqlalchemy import create_engine, text
 from sqlalchemy.pool import StaticPool
 from sqlalchemy.orm import sessionmaker
-from database.database import Base
+from backend.database.database import Base
 import pytest
-from routers.auth import bcrypt_context
-from models.models import Users, Todos
+from backend.routers.auth import bcrypt_context
+from backend.models.models import Users, Todos
 
 
-SQLALCHEMY_TEST_DATABASE_URL = "sqlite:///./database/testdb.db"
+SQLALCHEMY_TEST_DATABASE_URL = "sqlite:///./backend/database/testdb.db"
 test_engine = create_engine(
     SQLALCHEMY_TEST_DATABASE_URL,
     connect_args={"check_same_thread": False},
