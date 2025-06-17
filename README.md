@@ -11,30 +11,34 @@
 
 ```
 Root-dir
-|- `requirements.txt` (file)
-|- `README.md` (file)
-|-  `main.py` (file, entry point)
-|-  `database` (dir)
-      |- `local.db` (local testing)
-      |- `.py`  (database connection file)
-      |- `prod.db`(`prod testing`)
-|- `models` (dir)
-|-  `test`  (dir)
-|- `routers` (dir)
-     |_ `*.py` (all endpoints)
-|- `static` (Frontend dir)
-      - `css` (dir)
-        |_  `*.css`
-      - `js`   (dir)
-          |_ `*.js` 
-|-  `templates` (frontend dir)
-      |_ `*.html` 
-|-  `scripts` (dir)
-      |_ `*.sh` 
-|-  `alembic` (for data migration)
-|-  `.venv` (python virtual environment)
-|-   `.gitignore`
-
+     |
+     |- backend 
+            |- `requirements.txt` (file)
+            |-  `.dockerignore` (file)
+            |-  `main.py` (file, entry point)
+            |-  `database` (dir)
+                  |- `local.db` (local testing)
+                  |- `.py`  (database connection file)
+                  |- `prod.db`(`prod testing`)
+            |- `models` (dir)
+            |-  `test`  (dir)
+            |- `routers` (dir)
+                  |_ `*.py` (all endpoints)
+            |-  `scripts` (dir)
+                  |_ `*.sh` 
+            |-  `alembic` (for data migration)
+            |-  `.venv` (python virtual environment)
+      |
+      |-frontend
+            |- `static` (Frontend dir)
+                  |- `css` (dir)
+                        |-  `*.css`
+                  |- `js`   (dir)
+                        |_ `*.js` 
+            |-  `templates` (frontend dir)
+                  |_ `*.html`
+      |- `README.md` (file)
+      |-   `.gitignore` 
 ```
 
 ### Endpoints FrontEnd and Backend
