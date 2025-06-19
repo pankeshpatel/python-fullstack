@@ -51,7 +51,8 @@ async def render_add_todo_page(request: Request):
 
 
 @router.get("/edit-todo-page/{todo_id}")
-async def render_edit_todo_page(request: Request, todo_id: int, db: db_dependency):
+async def render_edit_todo_page(request: Request, 
+                                db: db_dependency,  todo_id: int = Path(gt=0)):
     try:
         user = await get_current_user(request.cookies.get("access_token"))
         if user is None:
@@ -65,10 +66,21 @@ async def render_edit_todo_page(request: Request, todo_id: int, db: db_dependenc
 
 
 class TodoRequest(BaseModel):
-    title: str = Field(min_length=3)
-    description: str = Field(min_length=3, max_length=100)
+    title: str = Field(...,min_length=3)
+    description: str = Field(...,min_length=3, max_length=100)
     priority: int = Field(gt=0, lt=6)
     complete: bool
+
+    model_config = {
+        "json_schema_extra": {
+            "example": {
+               "title": "first todo",
+               "description": "first todo description",
+               "priority": 1,
+               "complete": True
+            }
+        }
+    }
 
 
 @router.get("/", status_code=status.HTTP_200_OK)
