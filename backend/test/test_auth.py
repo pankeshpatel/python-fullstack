@@ -7,10 +7,10 @@ from .utils import (
     test_todo,
 )
 from fastapi import status, HTTPException
-from main import app
-from models.models import Users, Todos
+from backend.main import app
+from backend.models.models import Users, Todos
 
-from routers.auth import (
+from backend.routers.auth import (
     authenticate_user,
     create_access_token,
     SECRET_KEY,
@@ -19,7 +19,7 @@ from routers.auth import (
 )
 
 
-from database.database import get_db
+from backend.database.database import get_db
 from datetime import timedelta
 from jose import jwt
 import pytest

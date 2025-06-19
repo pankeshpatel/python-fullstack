@@ -1,13 +1,22 @@
 
 
+# Run
+
+- be on root directory
+- `poetry run uvicorn backend.main:app --reload`
+- `poetry run pytest backend/test --disable-warnings`
+
+## poetry initial setup
+
+```
+poetry init -n # to create initial .toml file
+poetry add fastapi bcrypt==4.0.1 python-multipart passlib uvicorn pydantic sqlalchemy python-jose psycopg2-binary jinja2
+poetry add --group dev pytest pytest-asyncio httpx # for development only
+```
 
 
 
-
-
-
-
-#### Project structure
+#### Project structure (full-stack)
 
 ```
 Root-dir

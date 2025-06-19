@@ -7,10 +7,10 @@ from .utils import (
     test_todo,
 )
 from fastapi import status, HTTPException
-from main import app
-from models.models import Users, Todos
-from routers.auth import get_current_user
-from database.database import get_db
+from backend.main import app
+from backend.models.models import Users, Todos
+from backend.routers.auth import get_current_user
+from backend.database.database import get_db
 from datetime import timedelta
 from jose import jwt
 import pytest

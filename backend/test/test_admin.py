@@ -7,12 +7,12 @@ from .utils import (
     test_todo,
 )
 from fastapi import status
-from main import app
-from models.models import Users, Todos
+from backend.main import app
+from backend.models.models import Users, Todos
 
 
-from database.database import get_db
-from routers.admin import get_current_user
+from backend.database.database import get_db
+from backend.routers.admin import get_current_user
 
 
 app.dependency_overrides[get_db] = override_get_db

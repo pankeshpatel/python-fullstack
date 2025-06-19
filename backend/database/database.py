@@ -5,6 +5,7 @@ from typing import Annotated
 from sqlalchemy.orm import Session
 from fastapi import Depends
 
+
 # sqlite connection
 SQLALCHEMY_DATABASE_URL = "sqlite:///./backend/database/todosapp.db"
 

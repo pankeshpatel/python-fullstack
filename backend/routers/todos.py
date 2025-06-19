@@ -1,11 +1,11 @@
 from fastapi import status, APIRouter, Depends, HTTPException, Path, Request
-from backend.database.database import db_dependency
 from typing import Annotated
 from backend.routers.auth import get_current_user
-from backend.models.models import Users, Todos
 from pydantic import BaseModel, Field
 from fastapi.templating import Jinja2Templates
 from starlette.responses import RedirectResponse
+from backend.models.models import Todos
+from backend.database.database import db_dependency
 
 templates = Jinja2Templates(directory="./frontend/templates")
 
