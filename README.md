@@ -30,7 +30,7 @@ poetry add --group dev pytest pytest-asyncio httpx # for development only
 Root-dir
      |
      |- backend 
-            |- `requirements.txt` (file)
+            |- `pyproject.toml` (file)
             |-  `.dockerignore` (file)
             |-  `main.py` (file, entry point)
             |-  `database` (dir)
@@ -90,6 +90,12 @@ users.py
 health.py
 (BE) GET         /health                  - check system status
 ```
+
+
+EXAMPLE
+    ![IMAGE](./backend/img/docs.png)
+
+
 
 
 #### notes
