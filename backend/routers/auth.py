@@ -7,7 +7,8 @@ from backend.models.models import Users
 from passlib.context import CryptContext
 from datetime import timedelta, datetime, timezone
 from fastapi.templating import Jinja2Templates
-from dotenv import load_dotenv
+from backend.config.config import settings
+# from dotenv import load_dotenv
 import os
 
 router = APIRouter(tags=["auth"])
@@ -16,11 +17,14 @@ bcrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 templates = Jinja2Templates(directory="./backend/templates")
 
 
-load_dotenv()
+# load_dotenv()
 
-SECRET_KEY = os.getenv("SECRET_KEY")
-ALGORITHM = os.getenv("ALGORITHM")
+# SECRET_KEY = os.getenv("SECRET_KEY")
+# ALGORITHM = os.getenv("ALGORITHM")
 
+
+SECRET_KEY = settings.SECRET_KEY
+ALGORITHM = settings.ALGORITHM
 
 @router.get("/login-page")
 def render_login_page(request: Request):

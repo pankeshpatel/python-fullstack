@@ -5,9 +5,10 @@ from typing import Annotated
 from sqlalchemy.orm import Session
 from fastapi import Depends
 import os
-from dotenv import load_dotenv
+from backend.config.config import settings
+# from dotenv import load_dotenv
 
-load_dotenv()
+# load_dotenv()
 
 
 # sqlite connection
@@ -32,14 +33,15 @@ db_dependency = Annotated[Session, Depends(get_db)]
 
 
 
+
 # use this for postgres database
 
 def get_url():
-    user = os.getenv("POSTGRES_USER")
-    password = os.getenv("POSTGRES_PASSWORD")
-    server = os.getenv("POSTGRES_SERVER")
-    port = os.getenv("POSTGRES_PORT")
-    db = os.getenv("POSTGRES_DB")
+    user =  settings.POSTGRES_USER  #  os.getenv("POSTGRES_USER")
+    password = settings.POSTGRES_PASSWORD   # os.getenv("POSTGRES_PASSWORD")
+    server =  settings.POSTGRES_SERVER # os.getenv("POSTGRES_SERVER")
+    port = settings.POSTGRES_PORT # os.getenv("POSTGRES_PORT")
+    db = settings.POSTGRES_DB # os.getenv("POSTGRES_DB")
     return f"postgresql://{user}:{password}@{server}:{port}/{db}"
 
 POSTGRES_DATABASE_URL = get_url()

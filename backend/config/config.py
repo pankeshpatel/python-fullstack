@@ -1,30 +1,25 @@
 import os
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
-class Settings():
-
+class Settings(BaseSettings):
 
     #POSTGRESQL
-    POSTGRES_USER: str = os.environ.get("POSTGRES_USER")
-    POSTGRES_PASSWORD: str = os.environ.get("POSTGRES_PASSWORD")
-    POSTGRES_DB: str = os.environ.get("POSTGRES_DB")
-    POSTGRES_SERVER: str = os.environ.get("POSTGRES_SERVER")
-    POSTGRES_PORT: str  = os.environ.get("POSTGRES_PORT")
+    POSTGRES_USER: str 
+    POSTGRES_PASSWORD: str 
+    POSTGRES_DB: str 
+    POSTGRES_SERVER: str 
+    POSTGRES_PORT: int 
 
-    #REDIS
-    redis_host: str = os.environ.get("REDIS_HOST")
-    redis_port: str = os.environ.get("REDIS_PORT")
-
-
+    # JWT
+    SECRET_KEY: str
+    ALGORITHM: str
 
 
-     # JWT
-    secret_key: str = "secret"
-    algorithm: str = "HS256"
-
-    class Config:
-        env_file = ".env.dev"
-        orm_mode = True
+    model_config = SettingsConfigDict(
+        env_file="./backend/.env.dev",
+        case_sensitive=True
+    )
 
 
 settings = Settings()
