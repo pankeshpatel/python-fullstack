@@ -13,7 +13,7 @@ import os
 router = APIRouter(tags=["auth"])
 oauth2_bearer = OAuth2PasswordBearer(tokenUrl="/login")
 bcrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-templates = Jinja2Templates(directory="./templates")
+templates = Jinja2Templates(directory="./backend/templates")
 
 
 load_dotenv()
