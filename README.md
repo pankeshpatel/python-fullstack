@@ -3,7 +3,7 @@
 # Run
 
 - be on root directory
-- `poetry run uvicorn backend.main:app --reload`
+- `poetry run uvicorn backend.app:app --reload`
 - `poetry run pytest backend/test --disable-warnings`
 
 ## poetry initial setup
@@ -24,39 +24,7 @@ poetry add --group dev pytest pytest-asyncio httpx # for development only
 
 
 
-#### Project structure (full-stack)
 
-```
-Root-dir
-     |
-     |- backend 
-            |- `pyproject.toml` (file)
-            |-  `.dockerignore` (file)
-            |-  `main.py` (file, entry point)
-            |-  `database` (dir)
-                  |- `local.db` (local testing)
-                  |- `.py`  (database connection file)
-                  |- `prod.db`(`prod testing`)
-            |- `models` (dir)
-            |-  `test`  (dir)
-            |- `routers` (dir)
-                  |_ `*.py` (all endpoints)
-            |-  `scripts` (dir)
-                  |_ `*.sh` 
-            |-  `alembic` (for data migration)
-            |-  `.venv` (python virtual environment)
-      |
-      |-frontend
-            |- `static` (Frontend dir)
-                  |- `css` (dir)
-                        |-  `*.css`
-                  |- `js`   (dir)
-                        |_ `*.js` 
-            |-  `templates` (frontend dir)
-                  |_ `*.html`
-      |- `README.md` (file)
-      |-   `.gitignore` 
-```
 
 ### Endpoints FrontEnd and Backend
 

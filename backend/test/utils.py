@@ -1,5 +1,5 @@
 from fastapi.testclient import TestClient
-from backend.main import app
+from backend.app import app
 from sqlalchemy import create_engine, text
 from sqlalchemy.pool import StaticPool
 from sqlalchemy.orm import sessionmaker
@@ -28,7 +28,7 @@ def override_get_db():
 
 
 def override_get_current_user():
-    return {"username": "testusername", "user_id": 1, "user_role": "admin"}
+    return {"username": "testuser", "user_id": 1, "user_role": "admin"}
 
 
 client = TestClient(app)

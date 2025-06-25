@@ -7,7 +7,7 @@ from .utils import (
     test_todo,
 )
 from fastapi import status, HTTPException
-from backend.main import app
+from backend.app import app
 from backend.models.models import Users, Todos
 from backend.routers.auth import get_current_user
 from backend.database.database import get_db

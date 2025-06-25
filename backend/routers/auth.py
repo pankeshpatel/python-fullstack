@@ -7,15 +7,19 @@ from backend.models.models import Users
 from passlib.context import CryptContext
 from datetime import timedelta, datetime, timezone
 from fastapi.templating import Jinja2Templates
-
+from dotenv import load_dotenv
+import os
 
 router = APIRouter(tags=["auth"])
 oauth2_bearer = OAuth2PasswordBearer(tokenUrl="/login")
 bcrypt_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-templates = Jinja2Templates(directory="./frontend/templates")
+templates = Jinja2Templates(directory="./templates")
 
-SECRET_KEY = "197b2c37c391bed93fe80344fe73b806947a65e36206e05a1a23c2fa12702fe3"
-ALGORITHM = "HS256"
+
+load_dotenv()
+
+SECRET_KEY = os.getenv("SECRET_KEY")
+ALGORITHM = os.getenv("ALGORITHM")
 
 
 @router.get("/login-page")

@@ -7,7 +7,7 @@ from starlette.responses import RedirectResponse
 from backend.models.models import Todos
 from backend.database.database import db_dependency
 
-templates = Jinja2Templates(directory="./frontend/templates")
+templates = Jinja2Templates(directory="./templates")
 
 
 router = APIRouter(prefix="/todos", tags=["todos"])

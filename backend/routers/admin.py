@@ -30,7 +30,7 @@ async def read_all_users(user: user_dependency, db: db_dependency):
 from fastapi import HTTPException, Path
 from sqlalchemy.exc import SQLAlchemyError
 
-@router.delete("/user/{username}")
+@router.delete("/{username}")
 async def delete_user(
     user: user_dependency,
     db: db_dependency,

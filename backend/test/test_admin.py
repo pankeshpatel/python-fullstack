@@ -7,10 +7,8 @@ from .utils import (
     test_todo,
 )
 from fastapi import status
-from backend.main import app
+from backend.app import app
 from backend.models.models import Users, Todos
-
-
 from backend.database.database import get_db
 from backend.routers.admin import get_current_user
 
@@ -33,7 +31,7 @@ def test_admin_read_all_authenticated_users(test_user):
 def test_admin_delete_user_authenticated(test_user):
     response = client.delete("/admin/testuser")
     assert response.status_code == status.HTTP_200_OK
-    assert response.json() == {"detail": "user is deleted successfully"}
+    assert response.json() == {"detail": "User is deleted successfully"}
 
 
 def test_adimin_read_all_todos_authenticated(test_todo):
