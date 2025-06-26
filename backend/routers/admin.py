@@ -5,6 +5,7 @@ from typing import Annotated
 from backend.models.models import Users, Todos
 
 
+
 router = APIRouter(prefix="/admin", tags=["admin"])
 user_dependency = Annotated[dict, Depends(get_current_user)]
 
