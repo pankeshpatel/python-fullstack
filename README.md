@@ -5,6 +5,7 @@
 - be on root directory
 - `poetry run uvicorn backend.app:app --reload`
 - `poetry run pytest backend/test --disable-warnings`
+- `poetry run gunicorn -w 4 -k uvicorn.workers.UvicornWorker backend.app:app --bind 0.0.0.0:8000`
 
 ## poetry initial setup
 
