@@ -93,7 +93,8 @@ EXAMPLE
 
 - ~~Unit Testing~~
 - Integration Testing
-- CI/CD using gitlab, 
+- end-to-end testing
+- CI/CD using gitlab, gitHub Actions 
 - GitHub Actions
 - MLOps
 - DevSecOps
@@ -104,13 +105,15 @@ EXAMPLE
 
 
 ### Front-end 
-- Full-stack application development
+- Full-stack application development using `React`
+- ~~Full-stack application development using `jinja`, `HTML/CSS/BootStrap/JS`~~
 
 ### Optimization, performance improvements
 
 - Asyncronouse programming/Concurrency
-- Caching
+- Caching using Redis
 - Database indexing
+- ~~`pydantic model` vs `SQLAlchdmy` model~~
 
 ### Security 
  - ~~`OAuth2` , `jwt`~~
@@ -118,12 +121,13 @@ EXAMPLE
  -  session-based vs ~~token-based~~
 
 ### Scalability, Fault-tolerance, reliability
- - Load balancing, Nginx
+ - Load balancing, `Nginx`
  - Autoscaling infrastructure.
  - Rate limit
- - Rate limiting and throttling.
  - ~~`Exception/Error Handling, `HTTPException`, `status`~~
  - ~~health-check~~
+ - ~~middleware `cors` , `logging`~~
+
 
 ### Interaction patterns
 
@@ -137,9 +141,11 @@ EXAMPLE
 
 - ~~Docker/Docker compose~~
 - Kubernates
-- Deployment to AWS Infrastructure, as lambda, ECS
+- Deployment to AWS Infrastructure, as lambda, ECS/Farget, ~~EC2~~
+- production grade deployment (`docker-compose`)
 - IaC, Terraform, CDK, Serverless
 - CDN 
+- domain name/route 53, HTTP, HTTPS certificate
 
 
 ### AI/ML
@@ -155,17 +161,18 @@ EXAMPLE
 ### Real-time data handling
 - Stream processing
 - video, audio
--  handling real-time streaming application
+- handling real-time streaming application
 - Stream Analytics
 
 
 -  ~~pydantic?~~
 - starlett?
 -  ~~poetry?~~
+- UV
 
 ### other architecture
 - Concurrency and idempotency.
 - Job scheduling and cron systems.
 - Events, message queues, and workers.
 - Clean Architecture
-- architecture pattern
+- architecture pattern: `data_pool (database)`
