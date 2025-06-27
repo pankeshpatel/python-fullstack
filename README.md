@@ -20,7 +20,7 @@
 
 
 ## docker-compose
-`docker compose -f backend/docker-compose-dev.yaml up --build`
+`docker compose -f backend/docker-compose-local.yaml up --build`
 
 
 ## poetry initial setup
