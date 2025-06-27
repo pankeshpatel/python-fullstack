@@ -32,17 +32,6 @@ poetry add --group dev pytest pytest-asyncio httpx # for development only
 ```
 
 
-
-#### Data Validation using `Pydantic` and `fastapi` 
-- Input Request Validation using `typing` and `pydantic`
-- Input Request example using `model_config`
-- Path Parameter Validation using `Path`
-- Query Parameter Validation using `Query`
-
-
-
-
-
 ### Endpoints FrontEnd and Backend
 
 ```
@@ -82,7 +71,6 @@ EXAMPLE
 
 
 
-
 #### notes
 
 ### Backend Engineering
@@ -109,6 +97,7 @@ EXAMPLE
 - GitHub Actions
 - MLOps
 - DevSecOps
+- Makefile, lint, rough
 
 ### Debugging
 - ~~python tools to debug code~~
