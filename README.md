@@ -7,6 +7,15 @@
 - `poetry run pytest backend/test --disable-warnings`
 - `poetry run gunicorn -w 4 -k uvicorn.workers.UvicornWorker backend.app:app --bind 0.0.0.0:8000`
 
+
+# docker
+
+- `to build a python docker file 
+`docker build -f backend/Dockerfile -t my-fastapi-app .`
+
+# run docker
+- `docker run -p 8000:8000 my-fastapi-app`
+
 ## poetry initial setup
 
 ```
