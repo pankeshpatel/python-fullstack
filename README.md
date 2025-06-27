@@ -121,7 +121,8 @@ EXAMPLE
  -  session-based vs ~~token-based~~
 
 ### Scalability, Fault-tolerance, reliability
- - Load balancing, `Nginx`
+ - Load balancing, 
+ - ~~Reverse proxy `Nginx`~~
  - Autoscaling infrastructure.
  - Rate limit
  - ~~`Exception/Error Handling, `HTTPException`, `status`~~
