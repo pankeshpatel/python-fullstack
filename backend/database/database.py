@@ -6,9 +6,7 @@ from sqlalchemy.orm import Session
 from fastapi import Depends
 import os
 from backend.config.config import settings
-# from dotenv import load_dotenv
 
-# load_dotenv()
 
 
 # sqlite connection
