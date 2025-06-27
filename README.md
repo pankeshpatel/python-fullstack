@@ -20,7 +20,7 @@
 
 
 ## docker-compose
-
+`docker compose -f backend/docker-compose-dev.yaml up --build`
 
 
 ## poetry initial setup
@@ -86,43 +86,24 @@ EXAMPLE
 #### notes
 
 ### Backend Engineering
-- CRUD operations
-- Query String, Path Parameters
+- ~~CRUD operations~~
+- ~~Query String, Path Parameters~~
 
 #### Data Validation
-- Input Request Validation using `typing` and `pydantic`
-- Input Request example using `model_config`
-- Path Parameter Validation using `Path`
-- Query Parameter Validation using `Query`
-
-#### Status Code/HTTP Exception
--  `HTTPException`, `status`
-
-#### Database
-
-- `SQLAlchemy`, `sqlite`
-
-
-#### Auth and Authorization
-
-- `jwt`
-
-
-### Clean architecture
-
-- `database.py` : stores database connection string, database
-- `models.py`   : stores info about tables of databases, PK, FK, Columns of tables 
-- `main.py`  : entry point of an application
+- ~~Input Request Validation using `typing` and `pydantic`~~
+- ~~Input Request example using `model_config`~~
+- ~~Path Parameter Validation using `Path`~~
+- ~~Query Parameter Validation using `Query`~~
 
 ### Database 
 
-- `alembic` (data migration tool)
-- `MySQL` , `PostgreSQL` , `sqlite`
+- ~~`alembic` (data migration tool)~~
+- ~~`MySQL` , `PostgreSQL` , `sqlite`~~
 
 
 ### Testing, CI/CD
 
-- Unit Testing
+- ~~Unit Testing~~
 - Integration Testing
 - CI/CD using gitlab, 
 - GitHub Actions
@@ -130,7 +111,7 @@ EXAMPLE
 - DevSecOps
 
 ### Debugging
-- python tools to debug code
+- ~~python tools to debug code~~
 
 
 ### Front-end 
@@ -143,17 +124,17 @@ EXAMPLE
 - Database indexing
 
 ### Security 
- - `OAuth2` 
- - Authentication & Authorization
-
+ - ~~`OAuth2` , `jwt`~~
+ - ~~Authentication & Authorization~~
+ -  session-based vs ~~token-based~~
 
 ### Scalability, Fault-tolerance, reliability
  - Load balancing, Nginx
  - Autoscaling infrastructure.
  - Rate limit
  - Rate limiting and throttling.
- - Exception/Error Handling
- - health-check
+ - ~~`Exception/Error Handling, `HTTPException`, `status`~~
+ - ~~health-check~~
 
 ### Interaction patterns
 
@@ -163,12 +144,9 @@ EXAMPLE
 - gRPC
 
 
-### Real-time Streaming
-
-
 ### Deployment
 
-- Docker/Docker compose
+- ~~Docker/Docker compose~~
 - Kubernates
 - Deployment to AWS Infrastructure, as lambda, ECS
 - IaC, Terraform, CDK, Serverless
@@ -182,7 +160,7 @@ EXAMPLE
 
 ### Monitoring and obeservation
 
-- DataDog
+- ~~DataDog~~
 - X-ray
 
 ### Real-time data handling
@@ -192,11 +170,9 @@ EXAMPLE
 - Stream Analytics
 
 
-### Questions to be explore
-
--  pydantic?
+-  ~~pydantic?~~
 - starlett?
--  poetry?
+-  ~~poetry?~~
 
 ### other architecture
 - Concurrency and idempotency.
