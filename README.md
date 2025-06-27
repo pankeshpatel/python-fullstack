@@ -1,6 +1,6 @@
 
 
-# Run
+## Run
 
 - be on root directory
 - `poetry run uvicorn backend.app:app --reload`
@@ -8,13 +8,20 @@
 - `poetry run gunicorn -w 4 -k uvicorn.workers.UvicornWorker backend.app:app --bind 0.0.0.0:8000`
 
 
-# docker
-
+## docker (Dockerfile)
 - `to build a python docker file 
 `docker build -f backend/Dockerfile -t my-fastapi-app .`
 
-# run docker
-- `docker run -p 8000:8000 my-fastapi-app`
+- run docker
+`docker run -p 8000:8000 my-fastapi-app`
+
+- access the page at
+`http://127.0.0.1:8000/docs`
+
+
+## docker-compose
+
+
 
 ## poetry initial setup
 

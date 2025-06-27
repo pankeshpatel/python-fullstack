@@ -1,0 +1,40 @@
+version: "3"
+services:
+  app:
+    build:
+      # Send everything in the current directory (python-full-stack/) to the Docker daemon.
+      context: ../
+      dockerfile: backend/Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../backend/database:/app/backend/database # Ensure SQLite .db file persists
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/app
+
+
+
+# context: ../
+# The build.context in a docker-compose.yml file is crucial 
+# because it tells Docker what files to send to the Docker engine when building your image.
+# This tells Docker:
+
+# Use the root python-full-stack/ directory as context (where pyproject.toml, etc. live)
+
+# Use the Dockerfile inside backend/
+
+
+# "8000:8000"
+# ⬆️   ⬇️
+# |   └── Port inside the container (where your FastAPI app is running)
+# └────── Port on your local machine (host)
+
+
+# Binds local DB directory into container
+#./backend/database:/app/backend/database
+# ⬆️   ⬇️
+# |   └──  Container Path (where your FastAPI app is running)
+# └──────  your local machine path (host)
+
+
