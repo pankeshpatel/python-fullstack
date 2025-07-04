@@ -4,25 +4,24 @@ services:
       # Send everything in the current directory (python-full-stack/) to the Docker daemon.
       context: ../
       dockerfile: backend/Dockerfile
-    # ports:
-    #   - "8000:8000"
     volumes:
       - ../backend/database:/app/backend/database # Ensure SQLite .db file persists
     environment:
       - PYTHONUNBUFFERED=1
       - PYTHONPATH=/app
-    expose:
-      - "8000" # Exposes port *internally* to Nginx only
+
   
   nginx:
     image: nginx:latest
     ports:
-      - "80:80"
+      - "443:443"
     depends_on:
       - app
     volumes:
-      - ./nginx/dev.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./nginx/dev.conf:/etc/nginx/nginx.conf:ro
       - ./static:/app/backend/static:ro
+      - ./nginx/nginx-selfsigned.crt:/etc/nginx/nginx-selfsigned.crt:ro
+      - ./nginx/nginx-selfsigned.key:/etc/nginx/nginx-selfsigned.key:ro
 
 
 

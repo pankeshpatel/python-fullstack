@@ -48,10 +48,10 @@ COPY . .
 # ---- Expose App Port ----
 #Tells Docker that this container listens on port 8000.
 # Informational only; actual port mapping is done during docker run -p.
-EXPOSE 8000
+EXPOSE 8080
 
 # ---- Start FastAPI App with Gunicorn + Uvicorn Worker ----
 #Runs the FastAPI app using:
 #Gunicorn as a process manager
 #UvicornWorker for handling asynchronous requests
-CMD ["gunicorn", "backend.app:app", "-k", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8000", "--workers", "4"]
+CMD ["gunicorn", "backend.app:app", "-k", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:8080", "--workers", "4"]

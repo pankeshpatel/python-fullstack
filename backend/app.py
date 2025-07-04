@@ -12,6 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 
 
+
 app = FastAPI()
 Base.metadata.create_all(bind=engine)
 app.mount("/static", StaticFiles(directory="./backend/static"), name="static")
@@ -48,3 +49,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/scheme")
+async def scheme(request: Request):
+    return {"scheme": request.url.scheme}

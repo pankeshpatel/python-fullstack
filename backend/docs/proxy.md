@@ -39,9 +39,38 @@ You can later add:
 - Load balancing
 - Routing to multiple APIs/services
 
+### 5. Load balancing
+
+  - load balancing method (etc. round robin)
+  - run multple instance and use `upstream` configuration 
 
 
+### 6. Encrypted communication using HTTPS
 
+- ssl termination offloading (`nginx` can handle SSL/TLS encryption and decryption)
+- enforce HTTPS
+- HTTPS uses SSL/TLS to encrypt the data transmitted over the web
+- All coomunication between client and server is encrypted
+- Even if someone intercepts the data, they can not read it.
+
+- Obtain an SSL/TLS Certificate (SSL/TLS certificates enable encryption by using public-key cryptography)
+- When a user connects to a website via HTTPS, the web server provides its SSL certificate, which contains a public key
+
+- To generate self-signed certificate
+```
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx-selfsigned.key -out nginx-selfsigned.crt
+```
+
+
+### 7. caching static files
+
+### 8. Security 
+   - certificate
+
+### 9. compression
+  - nginx proxy can compress the response
+  - To reduce bandwidth usage and improve load times
+  - Segmentation - sending response in chunks (Break the file into smaller chunks - video streaming)
 
 
 ## Full Request Flow Breakdown

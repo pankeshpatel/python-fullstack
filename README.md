@@ -119,6 +119,8 @@ EXAMPLE
  - ~~`OAuth2` , `jwt`~~
  - ~~Authentication & Authorization~~
  -  session-based vs ~~token-based~~
+ - `OAuth2`
+ - `SSL`, `TLS`
 
 ### Scalability, Fault-tolerance, reliability
  - Load balancing, 
