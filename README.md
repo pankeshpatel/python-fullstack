@@ -120,7 +120,7 @@ EXAMPLE
  - ~~Authentication & Authorization~~
  -  session-based vs ~~token-based~~
  - `OAuth2`
- - `SSL`, `TLS`
+ - ~~`SSL`, `TLS`~~
 
 ### Scalability, Fault-tolerance, reliability
  - Load balancing, 
@@ -134,7 +134,7 @@ EXAMPLE
 
 ### Interaction patterns
 
-- HTTP/HTTPS
+- ~~HTTP/HTTPS~~
 - GraphQL
 - WebSocket
 - gRPC
@@ -148,7 +148,7 @@ EXAMPLE
 - production grade deployment (`docker-compose`)
 - IaC, Terraform, CDK, Serverless
 - CDN 
-- domain name/route 53, HTTP, HTTPS certificate
+- domain name/route 53, ~~HTTP, HTTPS certificate~~
 
 
 ### AI/ML
