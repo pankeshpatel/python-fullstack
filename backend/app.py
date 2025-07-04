@@ -50,6 +50,3 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/scheme")
-async def scheme(request: Request):
-    return {"scheme": request.url.scheme}
