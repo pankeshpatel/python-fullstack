@@ -155,6 +155,7 @@ Response sent back all the way to browser
   https://www.youtube.com/watch?v=0sOvCWFmrtA
 
 - code repo: https://github.com/Sanjeev-Thiyagarajan/fastapi-course
+- Full NGINX Tutorial - Demo Project with Node.js, Docker : https://www.youtube.com/watch?v=q8OleYuqntY&t=225s
 
 - this video is about nginx configuration on EC2 Ubuntu
 - install nginx and configure its default file

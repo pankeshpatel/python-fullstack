@@ -179,3 +179,4 @@ EXAMPLE
 - Events, message queues, and workers.
 - Clean Architecture
 - architecture pattern: `data_pool (database)`
+- event driven architecture
