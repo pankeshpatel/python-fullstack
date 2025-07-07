@@ -93,20 +93,24 @@ EXAMPLE
 
 - ~~Unit Testing~~
 - Integration Testing
-- end-to-end testing
+- end-to-end testing using `Playwright`, `Pytest`
 - CI/CD using gitlab, gitHub Actions 
 - GitHub Actions
 - MLOps
 - DevSecOps
-- Makefile, lint, rough
+- Makefile, lint, rough, code coverage
+
 
 ### Debugging
 - ~~python tools to debug code~~
 
 
+
+
 ### Front-end 
 - Full-stack application development using `React`
 - ~~Full-stack application development using `jinja`, `HTML/CSS/BootStrap/JS`~~
+
 
 ### Optimization, performance improvements
 
@@ -121,6 +125,7 @@ EXAMPLE
  -  session-based vs ~~token-based~~
  - `OAuth2`
  - ~~`SSL`, `TLS`~~
+ - Email based password recovery.
 
 ### Scalability, Fault-tolerance, reliability
  - Load balancing, 
@@ -178,5 +183,6 @@ EXAMPLE
 - Job scheduling and cron systems.
 - Events, message queues, and workers.
 - Clean Architecture
-- architecture pattern: `data_pool (database)`
+- design & architecture pattern: `data_pool (database)`
 - event driven architecture
+- dependency injection (e.g, `lifespan`)
