@@ -74,8 +74,25 @@ EXAMPLE
 #### notes
 
 ### Backend Engineering
-- ~~CRUD operations~~
+- ~~CRUD operations~~: ~~`GET`, `PUT`, `POST`, `DELETE`~~, `PATCH`
 - ~~Query String, Path Parameters~~
+- ~~HTTP Status~~
+- ~~HTTP headers~~
+- Pagination
+- Idempotency
+- HATEOS
+- API Versioning
+- Content Negotiation
+
+### Security 
+ - ~~`OAuth2` , `jwt`~~
+ - ~~Authentication & Authorization~~
+ -  session-based vs ~~token-based~~
+ - `OAuth2`,
+ - `AWS Cognito`
+ - ~~`SSL`, `TLS`~~
+ - Email based password recovery.
+
 
 #### Data Validation
 - ~~Input Request Validation using `typing` and `pydantic`~~
@@ -83,32 +100,33 @@ EXAMPLE
 - ~~Path Parameter Validation using `Path`~~
 - ~~Query Parameter Validation using `Query`~~
 
+
 ### Database 
 
 - ~~`alembic` (data migration tool)~~
 - ~~`MySQL` , `PostgreSQL` , `sqlite`~~
 
 
+
 ### Testing, CI/CD
 
-- ~~Unit Testing~~
+- ~~Unit Testing using `pytest`~~
 - Integration Testing
-- end-to-end testing using `Playwright`, `Pytest`
+- ~~end-to-end testing using `Playwright` (cancelled)~~
 - CI/CD using gitlab, gitHub Actions 
 - GitHub Actions
 - MLOps
 - DevSecOps
-- Makefile, lint, rough, code coverage
+- Makefile, 
+- ~~Code quality using lint, ruff, code coverage~~
 
 
 ### Debugging
 - ~~python tools to debug code~~
 
 
-
-
 ### Front-end 
-- Full-stack application development using `React`
+- ~~Full-stack application development using `React` (cancelled)~~
 - ~~Full-stack application development using `jinja`, `HTML/CSS/BootStrap/JS`~~
 
 
@@ -119,16 +137,12 @@ EXAMPLE
 - Database indexing
 - ~~`pydantic model` vs `SQLAlchdmy` model~~
 
-### Security 
- - ~~`OAuth2` , `jwt`~~
- - ~~Authentication & Authorization~~
- -  session-based vs ~~token-based~~
- - `OAuth2`
- - ~~`SSL`, `TLS`~~
- - Email based password recovery.
+
 
 ### Scalability, Fault-tolerance, reliability
- - Load balancing, 
+ - Load balancing using Nginx,
+ - Load balancing using AWS Load Balancer 
+ - Secured AWS Deployment : AWS Firewall, VPC
  - ~~Reverse proxy `Nginx`~~
  - Autoscaling infrastructure.
  - Rate limit
@@ -149,7 +163,7 @@ EXAMPLE
 
 - ~~Docker/Docker compose~~
 - Kubernates
-- Deployment to AWS Infrastructure, as lambda, ECS/Farget, ~~EC2~~
+- Deployment to AWS Infrastructure, as lambda, ECS/Farget, EC2
 - production grade deployment (`docker-compose`)
 - IaC, Terraform, CDK, Serverless
 - CDN 
@@ -174,9 +188,8 @@ EXAMPLE
 
 
 -  ~~pydantic?~~
-- starlett?
 -  ~~poetry?~~
-- UV
+- ~~UV~~
 
 ### other architecture
 - Concurrency and idempotency.

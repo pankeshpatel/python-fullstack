@@ -1,7 +1,7 @@
 from fastapi import FastAPI, status, Request
 from fastapi.middleware import Middleware
 from typing import List
-from backend.routers import auth, todos, admin, users, health, learn
+from backend.routers import auth, todos, admin, users, health
 from backend.database.database import engine, Base
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
@@ -29,7 +29,7 @@ app.include_router(auth.router)
 app.include_router(todos.router)
 app.include_router(users.router)
 app.include_router(health.router)
-app.include_router(learn.router)
+
 
 # middleware
 
